@@ -2,9 +2,9 @@ services:
   web:
     build: .
     ports:
-      - ${WEB_HOST_PORT}:${WEB_CONTAINER_PORT}
+      - "8081:80"
     volumes:
-      - ./src:/var/www/html
+        - ./:/var/www/html
     depends_on:
       - db
     environment:
