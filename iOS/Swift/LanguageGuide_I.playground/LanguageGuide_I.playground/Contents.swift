@@ -12,13 +12,13 @@ System.out.println("La nota media es: "+media); //8.6
 Comprueba que la nota media es un número decimal
  */
 
-var matematicas: Int = 10
-var lenguaCastellana: Int? = 8
-var ingles: Int = 10
-var ccnn: Int = 10
-var ccss: Int = 5
+var matematicas: Double = 10.0
+var lenguaCastellana: Double = 8.0
+var ingles: Double = 10.0
+var ccnn: Double = 10.0
+var ccss: Double = 5.0
 
-var media: Double = Double((matematicas + lenguaCastellana + ingles + ccnn + ccss)/5)
+var media: Double = (matematicas + lenguaCastellana + ingles + ccnn + ccss)/5
 
 print("La nota media es: \(media)")
 
@@ -29,6 +29,18 @@ print("La nota media es: \(media)")
  */
 
 
+var longitudLado: Int = 4
+
+var radio: Double = 5.5
+
+var areaCuadrado = longitudLado * longitudLado
+
+var areaCirculo = Double.pi * radio * radio 
+
+print("El area del cuadrado es \(areaCuadrado) y la del círculo es \(areaCirculo)")
+
+
+
 
 /*A03 Escribe el código SWIFT que dado un número entero, muestre por consola "es par" si es par y "es impar" si es impar. Usa el operador ternario a ? b : c
  
@@ -37,6 +49,11 @@ print("La nota media es: \(media)")
 
 
 
+let numero = 7  
+
+let resultado = (numero % 2 == 0) ? "Es un número par" : "Es un número impar"
+
+print(resultado)
 
 
 /*
@@ -49,8 +66,25 @@ print("La nota media es: \(media)")
 
 
 
+var fecha = (month: 5, day: 2, year: 2025)
+
+let (mes, dia, _) = fecha  
+
+print("Mes: \(mes), Día: \(dia)")
+
+print(fecha)
+
+
 /*A05 La compañía de vuelo LaSalleAir establece que cada pasajero puede subir a bordo una maleta de mano cuyo peso no sobrepase los 10 kg, y tenga unas dimensiones máximas de 55 cm x 40 cm x 20 cm (altura x anchura x profundidad), debido al espacio limitado en cabina. Los pasajeros que superen alguna de estas restricciones tendrán que facturar su equipaje. Escribe el código SWIFT que dado el peso y las dimensiones de una maleta, muestre por consola true si tiene que facturar su maleta de mano o false en caso contrario.
  */
+
+let peso = 15
+let alto = 50 
+let ancho = 39
+let profundidad = 18
+let facturar =  (peso > 10 || alto > 55 || ancho > 40 || profundidad > 20)
+
+
 
 
 
@@ -58,6 +92,10 @@ print("La nota media es: \(media)")
  Crea una constante llamada parsedInt y asignale el valor Int("10"), que intenta parsear la string 10 y convertirla a Int. Usa Option-Click sobre parsedInt ¿Cual es tipo de tu variable parsedInt?, ¿por qué es optional?
  Cambia el valor de parsedInt a un valor no entero por ejemplo "dog". ¿Cual es el tipo de tu variable parsedInt ahora?
  */
+
+let parsedInt = Int("10")
+
+// Es opcional porque estas convirtiendo un dato a otro tipo de dato por lo que no sabes si se podrá hacer o no 
 
 
 
@@ -70,6 +108,11 @@ print("La nota media es: \(media)")
 
  */
 
+    let myFavoriteSong: String? = nil 
+
+    print(myFavoriteSong)
+
+
 
 
 /*A08
@@ -81,19 +124,45 @@ print("La nota media es: \(media)")
 
  */
 
+    let aleatorio1: Int = Int.random(in: 1 ...99)
+    let aleatorio2: Double = Double.random(in: 0...1)
+    let aleatorio3: Bool = Bool.random()
+
+    print(aleatorio1) 
+    print(aleatorio2) 
+    print(aleatorio3) 
 
 
 /*A09
  Dada una string con el nombre de un usuario y una string con los apellidos de un usuario. Crea una string que contenga el nombre completo. Crea otra string que contenga el nombre y apellidos de otro usuario. Compara los nombres de ambos usuarios (ignore case) mostrando por consola si son iguales o no
  */
 
+let nombre = "Carlos "
+let apellidos= "Jofre Himenez"
+
+let completo = nombre + apellidos
+
+print(completo)
+
+let persona = "Juna Fernandez Lugo"
+
+
+let comprobacion = (completo.caseInsensitiveCompare(persona) == .orderedSame) ? "Es el mismo nombre" : "No es el mismo nombre"
+
+print (comprobacion)
 
 
 /*A10
  Declara 3 strings, siendo uno de ellos un emoticono. Usa Swift String interpolation para construir otra string con las strings dadas
  */
 
+let string1 = "Hola"
+let string2 = " que tal"
+let string3 = "🫠"
 
+let mensaje = "\(string1) \(string2)? pues un poco \(string3) "
+
+print(mensaje)
 
 /*
  A11
@@ -111,13 +180,49 @@ print("La nota media es: \(media)")
  
  */
 
+ let distance: UInt = 10
 
+switch distance{
+    case 0:
+    print("Here")
+
+    case 1..<5:
+    print("Immediate vicinity")
+
+    case 5...15:
+    print("Near")
+
+    case 16...40:
+    print("Kind of far")
+    
+    default:
+    print("Far")
+
+}
 
 /*A12
  Crea un array con 3 strings: “C”, “C++”, “Objective-C”. Añade dos nuevos elementos al array (“Swift”, “Other”) en una única sentencia. Añade un nuevo elemento en la posición 2. Muestra por consola el número de elementos del array. Muestra por consola el índice y el valor de cada item del array. Elimina el elemento “Objective-C” del array
  */
 
+var lista: [String] = ["C", "C++", "Objective-C"]
 
+lista += ["Swift", "Other"]
+
+lista.insert("Python",at:2)
+
+print(lista)
+
+print("En la lista hay \(lista.count) items")
+
+
+for (indice, item) in lista.enumerated(){
+
+    print("Posicion \(indice): \(item)")
+}
+
+
+lista.remove(at:3)
+print(lista)
 
 /*A13
  Añade los valores 1138, 1337, y 4711 al final del siguiente array:
@@ -125,14 +230,31 @@ print("La nota media es: \(media)")
  Usa sólamente una línea de código.
  */
 
+var stuff = [4, 8, 15, 16, 23, 42]
 
+stuff += [1138, 1337, 4711]
+
+print(stuff)
 
 /*A14 Crea un array de números y calcula la suma de todos los elementos.*/
 
+var list = [1,2,3,4,5,6,7,8,9]
+
+var acumulado = 0 
+
+for numero in list{
+
+
+    acumulado += numero
+}
+
+    print(acumulado)
 
 
 /*A15 Crea un diccionario que posteriormente se pueda modificar llamado secretIdentities donde las parejas de clave valor sean "Hulk" -> "Bruce Banner", "Batman" -> "Bruce Wayne", and "Superman" -> "Clark Kent". Muestra por consola la identidad secreta de Batman. Reemplaza la identidad secreta de Hulk con "David Banner".
  */
+
+
 
 
 /*A16 Crea un diccionario que mapee nombres de países a capitales y muestra todas las capitales.*/
