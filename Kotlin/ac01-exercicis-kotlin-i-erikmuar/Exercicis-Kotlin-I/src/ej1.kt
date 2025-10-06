@@ -1,37 +1,49 @@
-/*1. Dissenya un programa que demani a l’usuari un valor no negatiu per teclat. Si
-l’usuari insereix un valor negatiu, el programa li haurà de demanar de nou el
-valor fins que sigui positiu.
-Extra: Modifica el teu algoritme per a què només accepti valors entre 0 i 10.
+/*
+
+. La ciutat de Girona està banyada pels rius Ter i Onyar. Quan plouen més de 90
+litres per metre quadrat, el riu Onyar puja de nivell i posa en perill els fonaments
+dels edificis de la vora del riu. Quan això passa, s’han d’obrir unes comportes per
+tal de desviar l’aigua del riu Onyar cap al riu Ter. Crea un algoritme que gestioni
+les comportes
+
 */
 
-fun pedirNumero() {
 
-    var numero: Int = 0;
-
-    do{
-
-        print("Escribe un numero positivo del 0 al 10: ")
-
-         numero = readLine()!!.toInt();
-
-        if(numero in 0..10){
-
-            println("El número $numero es correcto!.")
-
-        }else{
-
-            println("El número es incorrecto, introduce un numero entre el 0 y el 10")
-
-        }
-
-    }while (numero !in 0..10 )
-
-
-
-}
 
 fun main(){
 
-    pedirNumero()
+    compuertas()
+}
+
+
+fun compuertas (){
+
+    var abrir: Boolean = false;
+
+    var litros: Int;
+
+
+
+
+    do{
+
+        println("Introduce cuantos litros hay")
+
+        litros = readLine()!!.toInt();
+
+        if(litros>89){
+
+            abrir  = true;
+            println("Abriendo compuertas...");
+
+        }else{
+
+            print("Nivel del agua correcto.");
+        }
+
+
+    }while(litros < 90)
+
+
 }
 
