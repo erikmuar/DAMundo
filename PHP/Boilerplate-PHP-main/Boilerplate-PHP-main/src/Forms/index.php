@@ -16,13 +16,13 @@
 
     <?php if (!empty($success)) : ?>
       <section>
-        <p>✅ <?= htmlspecialchars($success) ?></p>
+        <p><?= htmlspecialchars($success) ?></p>
       </section>
     <?php endif; ?>
 
     <?php if (!empty($errors)) : ?>
       <section>
-        <p>❌ Hi ha errors al formulari.</p>
+        <p> Hi ha errors al formulari.</p>
       </section>
     <?php endif; ?>
 
