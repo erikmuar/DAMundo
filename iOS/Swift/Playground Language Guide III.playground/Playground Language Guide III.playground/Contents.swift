@@ -11,10 +11,53 @@ import Foundation
  */
 
 
+struct Point2D{
+
+    var x: Double = 0.0
+    var y: Double = 0.0 
+    var descripcion: String {
+        return "Point x:\(x) y:\(y)"
+    }
+
+}
+
+let aPoint = Point2D(x: 2.0, y:5.0)
+
+let anotherPoint = Point2D(x: 0, y:0)
+
+print(aPoint.descripcion)
+print(anotherPoint.descripcion)
+
+
 /*A02
  Modifica el struct Point2D de la actividad anterior, identificándolo como Point2DWithInitializers, de forma que no asigne el valor por defecto de 0.0 a sus stored properties x e y. Implementa los inicializadores con y sin parámetros de entrada que permitan crear los objetos aPoint y anotherPoint de la actividad anterior.
  */
 
+struct Point2DWithInitializers {
+    var x: Double
+    var y: Double
+    var descripcion: String {
+        return "Point x:\(x) y:\(y)"
+    }
+    
+    
+    init() {
+        self.x = 0.0
+        self.y = 0.0
+    }
+    
+    init(x: Double, y: Double) {
+        self.x = x
+        self.y = y
+    }
+}
+
+
+let aPoint = Point2DWithInitializers(x: 2.0, y: 5.0)
+let anotherPoint = Point2DWithInitializers()
+
+print(aPoint.descripcion)
+print(anotherPoint.descripcion)
 
 
 
