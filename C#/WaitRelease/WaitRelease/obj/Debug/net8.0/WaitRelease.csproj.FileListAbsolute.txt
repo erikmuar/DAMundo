@@ -1,0 +1,15 @@
+C:\Users\erikm\Desktop\DAMundo\C#\WaitRelease\WaitRelease\bin\Debug\net8.0\WaitRelease.exe
+C:\Users\erikm\Desktop\DAMundo\C#\WaitRelease\WaitRelease\bin\Debug\net8.0\WaitRelease.deps.json
+C:\Users\erikm\Desktop\DAMundo\C#\WaitRelease\WaitRelease\bin\Debug\net8.0\WaitRelease.runtimeconfig.json
+C:\Users\erikm\Desktop\DAMundo\C#\WaitRelease\WaitRelease\bin\Debug\net8.0\WaitRelease.dll
+C:\Users\erikm\Desktop\DAMundo\C#\WaitRelease\WaitRelease\bin\Debug\net8.0\WaitRelease.pdb
+C:\Users\erikm\Desktop\DAMundo\C#\WaitRelease\WaitRelease\obj\Debug\net8.0\WaitRelease.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erikm\Desktop\DAMundo\C#\WaitRelease\WaitRelease\obj\Debug\net8.0\WaitRelease.AssemblyInfoInputs.cache
+C:\Users\erikm\Desktop\DAMundo\C#\WaitRelease\WaitRelease\obj\Debug\net8.0\WaitRelease.AssemblyInfo.cs
+C:\Users\erikm\Desktop\DAMundo\C#\WaitRelease\WaitRelease\obj\Debug\net8.0\WaitRelease.csproj.CoreCompileInputs.cache
+C:\Users\erikm\Desktop\DAMundo\C#\WaitRelease\WaitRelease\obj\Debug\net8.0\WaitRelease.sourcelink.json
+C:\Users\erikm\Desktop\DAMundo\C#\WaitRelease\WaitRelease\obj\Debug\net8.0\WaitRelease.dll
+C:\Users\erikm\Desktop\DAMundo\C#\WaitRelease\WaitRelease\obj\Debug\net8.0\refint\WaitRelease.dll
+C:\Users\erikm\Desktop\DAMundo\C#\WaitRelease\WaitRelease\obj\Debug\net8.0\WaitRelease.pdb
+C:\Users\erikm\Desktop\DAMundo\C#\WaitRelease\WaitRelease\obj\Debug\net8.0\WaitRelease.genruntimeconfig.cache
+C:\Users\erikm\Desktop\DAMundo\C#\WaitRelease\WaitRelease\obj\Debug\net8.0\ref\WaitRelease.dll

@@ -11,3 +11,17 @@ C:\Users\Professor\Desktop\Sensors Transit\Sensors Transit\obj\Debug\netcoreapp3
 C:\Users\Professor\Desktop\Sensors Transit\Sensors Transit\obj\Debug\netcoreapp3.1\Sensors Transit.dll
 C:\Users\Professor\Desktop\Sensors Transit\Sensors Transit\obj\Debug\netcoreapp3.1\Sensors Transit.pdb
 C:\Users\Professor\Desktop\Sensors Transit\Sensors Transit\obj\Debug\netcoreapp3.1\Sensors Transit.genruntimeconfig.cache
+C:\Users\erikm\Desktop\DAMundo\C#\Sensors Transit\Sensors Transit\Sensors Transit\bin\Debug\netcoreapp3.1\Sensors Transit.exe
+C:\Users\erikm\Desktop\DAMundo\C#\Sensors Transit\Sensors Transit\Sensors Transit\bin\Debug\netcoreapp3.1\Sensors Transit.deps.json
+C:\Users\erikm\Desktop\DAMundo\C#\Sensors Transit\Sensors Transit\Sensors Transit\bin\Debug\netcoreapp3.1\Sensors Transit.runtimeconfig.json
+C:\Users\erikm\Desktop\DAMundo\C#\Sensors Transit\Sensors Transit\Sensors Transit\bin\Debug\netcoreapp3.1\Sensors Transit.runtimeconfig.dev.json
+C:\Users\erikm\Desktop\DAMundo\C#\Sensors Transit\Sensors Transit\Sensors Transit\bin\Debug\netcoreapp3.1\Sensors Transit.dll
+C:\Users\erikm\Desktop\DAMundo\C#\Sensors Transit\Sensors Transit\Sensors Transit\bin\Debug\netcoreapp3.1\Sensors Transit.pdb
+C:\Users\erikm\Desktop\DAMundo\C#\Sensors Transit\Sensors Transit\Sensors Transit\obj\Debug\netcoreapp3.1\Sensors Transit.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erikm\Desktop\DAMundo\C#\Sensors Transit\Sensors Transit\Sensors Transit\obj\Debug\netcoreapp3.1\Sensors Transit.AssemblyInfoInputs.cache
+C:\Users\erikm\Desktop\DAMundo\C#\Sensors Transit\Sensors Transit\Sensors Transit\obj\Debug\netcoreapp3.1\Sensors Transit.AssemblyInfo.cs
+C:\Users\erikm\Desktop\DAMundo\C#\Sensors Transit\Sensors Transit\Sensors Transit\obj\Debug\netcoreapp3.1\Sensors Transit.csproj.CoreCompileInputs.cache
+C:\Users\erikm\Desktop\DAMundo\C#\Sensors Transit\Sensors Transit\Sensors Transit\obj\Debug\netcoreapp3.1\Sensors Transit.sourcelink.json
+C:\Users\erikm\Desktop\DAMundo\C#\Sensors Transit\Sensors Transit\Sensors Transit\obj\Debug\netcoreapp3.1\Sensors Transit.dll
+C:\Users\erikm\Desktop\DAMundo\C#\Sensors Transit\Sensors Transit\Sensors Transit\obj\Debug\netcoreapp3.1\Sensors Transit.pdb
+C:\Users\erikm\Desktop\DAMundo\C#\Sensors Transit\Sensors Transit\Sensors Transit\obj\Debug\netcoreapp3.1\Sensors Transit.genruntimeconfig.cache

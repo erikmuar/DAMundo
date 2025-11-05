@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
+
+// Erik Muñoz 
+
 namespace SensorsTransit
 {
     //Classe que implementa la informació d'un sol sensor
@@ -70,25 +73,30 @@ namespace SensorsTransit
         /// </summary>
         public void RebreDadesSensors()
         {
-            for (int i = 0; i < NumSensors; i++)
+            var local = new Sensor[NumSensors];
+
+            Parallel.For(0, NumSensors, i =>
             {
-                SensorsLocal.Add(Sensors[i].EnviaDadesCentral());
-            }
+                local[i] = Sensors[i].EnviaDadesCentral();
+            });
+            SensorsLocal = local.ToList();
         }
 
         //TASCA A FER: Cal optimitzar aquest mètode, si és possible utilitzant mètodes de programació en paral·lel, concretamen el Parallel.For
         /// <summary>
         /// Aquest mètode mostra les dades de tots els sensors, però no cal que sigui en ordre.
         /// </summary>
+        
+
         public void MostraDadesSensors()
         {
-            string Missatge;
-
-            for (int i = 0; i < NumSensors; i++)
+            Parallel.For(0, NumSensors, i =>
             {
-                Missatge = "Sensor nº " + SensorsLocal[i].IdSensor + " --- " + SensorsLocal[i].NumVehicles + " vehicles comptabilitzats.";
-                Mostra(Missatge);
-            }
+                string missatge = "Sensor nº " + SensorsLocal[i].IdSensor +
+                                  " --- " + SensorsLocal[i].NumVehicles +
+                                  " vehicles comptabilitzats.";
+                Mostra(missatge);
+            });
         }
 
         //No cal optimitzar aquest mètode, només és per comprovar que s'han ordenat bé les dades
@@ -106,23 +114,37 @@ namespace SensorsTransit
         /// </summary>
         public void ResetSensors()
         {
-            for (int i = 0; i < NumSensors; i++)
+            Parallel.For(0, NumSensors, i =>
             {
                 Sensors[i].Connecta();
                 Sensors[i].Reset();
-            }
+            });
         }
 
         //TASCA A FER: Optimitzar aquest mètode si és possible
         /// <summary>
         /// Aquest mètode realitza la mitajana de vehicles de tots els sensors. Per fer-ho utilitza el mètode suma (que té un retard)
         /// </summary>
+        
+
         public void CalcularMitjana()
+
         {
-            for (int i = 0; i < NumSensors; i++)
+             object locker = new object(); 
+
+
+            SumaVehicles = 0; 
+
+            Parallel.For(0, NumSensors, i =>
             {
-                SumaVehicles = Suma(SumaVehicles, SensorsLocal[i]);
-            }
+                int parcial = Suma(0, SensorsLocal[i]);
+
+                lock (locker)
+                {
+                    SumaVehicles += parcial;
+                }
+            });
+
             MitjanaVehicles = SumaVehicles / NumSensors;
         }
 
@@ -133,11 +155,18 @@ namespace SensorsTransit
         public void CalcularMaxVehicles()
         {
             MaxVehicles = 0;
+            object locker = new object();
 
-            for (int i = 0; i < NumSensors - 1; i++)
+            Parallel.For(0, NumSensors, i =>
             {
-                MaxVehicles = MesGran(MaxVehicles, SensorsLocal[i]);
-            }
+                int vehicle = MesGran(i, SensorsLocal[i]);
+
+                lock (locker)
+                {
+                    if (vehicle > MaxVehicles)
+                    { MaxVehicles = vehicle; }
+                }
+            });
         }
 
         //TASCA A FER: Optimitzar aquest mètode si és possible
@@ -153,7 +182,7 @@ namespace SensorsTransit
             while (canvi)
             {
                 canvi = false;
-                for (int i = 0; i < NumSensors - 1; i++)
+                Parallel.For(0; NumSensors ; i =>
                 {
                     if (EstanOrdenats(SensorsLocalOrd[i], SensorsLocalOrd[i + 1]))
                     {
