@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "C:\\Users\\erikm\\Desktop\\DAMundo\\C#\\Sensors Transit\\Sensors Transit\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\erikm\\Desktop\\DAMundo\\C#\\WaitRelease\\WaitRelease\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E70D6340-50A0-40C2-B95E-F2F22A196D71}|Sensors Transit\\Sensors Transit.csproj|c:\\users\\erikm\\desktop\\damundo\\c#\\sensors transit\\sensors transit\\sensors transit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E70D6340-50A0-40C2-B95E-F2F22A196D71}|Sensors Transit\\Sensors Transit.csproj|solutionrelative:sensors transit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -20,11 +23,24 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\erikm\\Desktop\\DAMundo\\C#\\WaitRelease\\WaitRelease\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\WaitRelease\\WaitRelease\\Program.cs",
+              "ToolTip": "C:\\Users\\erikm\\Desktop\\DAMundo\\C#\\WaitRelease\\WaitRelease\\Program.cs",
+              "RelativeToolTip": "..\\..\\WaitRelease\\WaitRelease\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-10T09:20:55.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\erikm\\Desktop\\DAMundo\\C#\\Sensors Transit\\Sensors Transit\\Sensors Transit\\Program.cs",
               "RelativeDocumentMoniker": "Sensors Transit\\Program.cs",
               "ToolTip": "C:\\Users\\erikm\\Desktop\\DAMundo\\C#\\Sensors Transit\\Sensors Transit\\Sensors Transit\\Program.cs",
               "RelativeToolTip": "Sensors Transit\\Program.cs",
-              "ViewState": "AgIAAKMAAAAAAAAAAAAAwLsAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAPcAAAAAAAAAAAAowAoBAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-27T11:13:11.173Z",
               "EditorCaption": ""

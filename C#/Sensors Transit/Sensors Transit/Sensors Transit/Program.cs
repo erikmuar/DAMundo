@@ -90,12 +90,16 @@ namespace SensorsTransit
 
         public void MostraDadesSensors()
         {
+            object locker = new object();
             Parallel.For(0, NumSensors, i =>
             {
                 string missatge = "Sensor nº " + SensorsLocal[i].IdSensor +
                                   " --- " + SensorsLocal[i].NumVehicles +
                                   " vehicles comptabilitzats.";
-                Mostra(missatge);
+                lock (locker)
+                {
+                    Mostra(missatge);
+                }
             });
         }
 
@@ -175,23 +179,30 @@ namespace SensorsTransit
         /// </summary>
         public void OrdenaVehicles()
         {
+            object locker = new object();
             bool canvi = true;
             Sensor aux;
 
-            SensorsLocalOrd = SensorsLocal;
+            SensorsLocalOrd = new List<Sensor>(SensorsLocal); // Crear una copia, no una referencia
+
             while (canvi)
             {
                 canvi = false;
-                Parallel.For(0; NumSensors ; i =>
+                Parallel.For(0, NumSensors - 1, i =>
                 {
+                    // Verificar si necesitan ordenarse (esto tiene un retraso simulado)
                     if (EstanOrdenats(SensorsLocalOrd[i], SensorsLocalOrd[i + 1]))
                     {
-                        aux = SensorsLocalOrd[i];
-                        SensorsLocalOrd[i] = SensorsLocalOrd[i + 1];
-                        SensorsLocalOrd[i + 1] = aux;
-                        canvi = true;
+                        lock (locker)
+                        {
+                            // Realizar el intercambio de forma segura
+                            aux = SensorsLocalOrd[i];
+                            SensorsLocalOrd[i] = SensorsLocalOrd[i + 1];
+                            SensorsLocalOrd[i + 1] = aux;
+                            canvi = true;
+                        }
                     }
-                }
+                });
             }
         }
 
@@ -251,21 +262,41 @@ namespace SensorsTransit
             SensorsBCN.RebreDadesSensors();
             Console.WriteLine("Dades rebudes");
 
-            SensorsBCN.MostraDadesSensors();
+            Thread threadMostrar = new Thread(() => SensorsBCN.MostraDadesSensors());
+            
+            Thread threadMitjana = new Thread(() =>
+            {
+                Console.WriteLine("Calculant mitjana");
+                SensorsBCN.CalcularMitjana();
+                Console.WriteLine("Mitjana vehicles: {0}", SensorsBCN.MitjanaVehicles);
+            });
+
+            Thread threadMax = new Thread(() =>
+            {
+                Console.WriteLine("Calculant vehicles max");
+                SensorsBCN.CalcularMaxVehicles();
+                Console.WriteLine("Max vehicles: {0}", SensorsBCN.MaxVehicles);
+            });
+
+            threadMostrar.Start();
+            threadMitjana.Start();
+            threadMax.Start();
+
+            threadMitjana.Join();  
+            threadMax.Join();      
+
+            Thread threadOrdenar = new Thread(() =>
+            {
+                Console.WriteLine("Ordenant vehicles");
+                SensorsBCN.OrdenaVehicles();
+                SensorsBCN.MostraDadesOrdenades();
+            });
+
+            threadOrdenar.Start();
 
 
-            Console.WriteLine("Calculant mitjana");
-            SensorsBCN.CalcularMitjana();
-            Console.WriteLine("Mitjana vehicles: {0}", SensorsBCN.MitjanaVehicles);
-
-
-            Console.WriteLine("Calculant vehicles max");
-            SensorsBCN.CalcularMaxVehicles();
-            Console.WriteLine("Max vehicles: {0}", SensorsBCN.MaxVehicles);
-
-            Console.WriteLine("Ordenant vehicles");
-            SensorsBCN.OrdenaVehicles();
-            SensorsBCN.MostraDadesOrdenades();
+            threadMostrar.Join();  
+            threadOrdenar.Join(); 
 
             Console.WriteLine("Resetejant sensors");
             SensorsBCN.ResetSensors();

@@ -1,0 +1,15 @@
+C:\Users\erikm\Desktop\DAMundo\C#\Semafor\Semafor\bin\Debug\net8.0\Semafor.exe
+C:\Users\erikm\Desktop\DAMundo\C#\Semafor\Semafor\bin\Debug\net8.0\Semafor.deps.json
+C:\Users\erikm\Desktop\DAMundo\C#\Semafor\Semafor\bin\Debug\net8.0\Semafor.runtimeconfig.json
+C:\Users\erikm\Desktop\DAMundo\C#\Semafor\Semafor\bin\Debug\net8.0\Semafor.dll
+C:\Users\erikm\Desktop\DAMundo\C#\Semafor\Semafor\bin\Debug\net8.0\Semafor.pdb
+C:\Users\erikm\Desktop\DAMundo\C#\Semafor\Semafor\obj\Debug\net8.0\Semafor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\erikm\Desktop\DAMundo\C#\Semafor\Semafor\obj\Debug\net8.0\Semafor.AssemblyInfoInputs.cache
+C:\Users\erikm\Desktop\DAMundo\C#\Semafor\Semafor\obj\Debug\net8.0\Semafor.AssemblyInfo.cs
+C:\Users\erikm\Desktop\DAMundo\C#\Semafor\Semafor\obj\Debug\net8.0\Semafor.csproj.CoreCompileInputs.cache
+C:\Users\erikm\Desktop\DAMundo\C#\Semafor\Semafor\obj\Debug\net8.0\Semafor.sourcelink.json
+C:\Users\erikm\Desktop\DAMundo\C#\Semafor\Semafor\obj\Debug\net8.0\Semafor.dll
+C:\Users\erikm\Desktop\DAMundo\C#\Semafor\Semafor\obj\Debug\net8.0\refint\Semafor.dll
+C:\Users\erikm\Desktop\DAMundo\C#\Semafor\Semafor\obj\Debug\net8.0\Semafor.pdb
+C:\Users\erikm\Desktop\DAMundo\C#\Semafor\Semafor\obj\Debug\net8.0\Semafor.genruntimeconfig.cache
+C:\Users\erikm\Desktop\DAMundo\C#\Semafor\Semafor\obj\Debug\net8.0\ref\Semafor.dll
